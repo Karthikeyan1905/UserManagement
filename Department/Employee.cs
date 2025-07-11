@@ -10,7 +10,7 @@ namespace UserManagement.Department
     public class Employee : Base
     {
         public object userID;
-
+        
         public int EmployeeID { get; set; }
         public int UserID { get; set; }
 
