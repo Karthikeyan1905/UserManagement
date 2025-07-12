@@ -9,15 +9,15 @@ namespace UserManagement.User
     public class LoginCredential
     {
         
-        //public long LoginID { get; set; }
+        
         public string? loginUsername {  get; set; }
-        private string _loginPassword = "1234";
-        public string? loginPassword
+        public string loginPassword = "1234";
+        public string? login_Password
         {
-            get { return _loginPassword; }
-            set { _loginPassword = value ?? "1234"; }
+            get { return loginPassword; }
+            set { loginPassword = value ?? "1234"; }
         }
-        //public string? status { get; set; }
+        
 
     }
 }

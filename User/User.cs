@@ -30,7 +30,6 @@ namespace UserManagement.User
             }
         }
         public bool HasPanCard { set; get; }
-
         public string? passportNo { set; get; }
         public string? passportNumber
         {
@@ -42,23 +41,18 @@ namespace UserManagement.User
             }
         }
         public bool HasPassport { get; set; }
-         
         public List<Phone> phone { get; set; }
-
-        
-
-
         public List<Education> educations { get; set; }
         public List<Address> addresses { get; set; }
 
         public bool HasExperience { get; set; }
         public List<Company> experiance { get; set; }
         public static List<UserInfo> RegisteredUsers { get; } = new();
-        public List<UserManagement.Department.Department> department { get; set; }
-        public List<UserManagement.Department.Designation> designation { get; set; }
-        public List<UserManagement.Department.Employee> employee { get; set; }
-        public List<UserManagement.Team.Team> team { get; set; }
 
-        public List<UserManagement.Team.TeamUser> teamUser { get; set; }
+        //public List<UserManagement.Department.Department> department { get; set; }
+        //public List<UserManagement.Department.Designation> designation { get; set; }
+        //public List<UserManagement.Department.Employee> employee { get; set; }
+        //public List<UserManagement.Team.Team> team { get; set; }
+        //public List<UserManagement.Team.TeamUser> teamUser { get; set; }
     }
 }
