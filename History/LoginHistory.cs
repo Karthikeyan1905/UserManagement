@@ -8,9 +8,10 @@ namespace UserManagement.History
 {
     public class LoginHistory
     {
-        public long LoginID { get; set; }
-        public string? status { get; set; }
+        public long LoginID { get; set; } 
+        public long UserID { get; set; }  
+        public string status { get; set; } = "Active";
         public DateTime loginTime { get; set; } = DateTime.Now;
-        public DateTime loginOut { get; set; } = DateTime.Now;
+        public DateTime? loginOut { get; set; } 
     }
 }
