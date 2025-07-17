@@ -8,6 +8,7 @@ using UserManagement.User;
 
 namespace UserManagement.User
 {
+    [Serializable]
     public class UserInfo
     {
         public object departments;
