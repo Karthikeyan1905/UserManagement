@@ -9,10 +9,13 @@ using UserManagement.User;
 namespace UserManagement.User
 {
     [Serializable]
-    public class UserInfo
+    public class UserInfo: Base
     {
         public object departments;
         public object Experiance;
+
+
+        public int userRoleID { get; set; }
         public LoginCredential? loginCredential { get; set; }
         public int? userID { set; get; }
         public string? email { set; get; }
@@ -50,10 +53,6 @@ namespace UserManagement.User
         public List<Company> experiance { get; set; }
         public static List<UserInfo> RegisteredUsers { get; } = new();
 
-        //public List<UserManagement.Department.Department> department { get; set; }
-        //public List<UserManagement.Department.Designation> designation { get; set; }
-        //public List<UserManagement.Department.Employee> employee { get; set; }
-        //public List<UserManagement.Team.Team> team { get; set; }
-        //public List<UserManagement.Team.TeamUser> teamUser { get; set; }
+   
     }
 }
