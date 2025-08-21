@@ -9,7 +9,7 @@ namespace UserManagement.Team
 {
     public class TeamUser : Base
     {
-        
+        public int Userid { get; set; }
         public int TeamID { get; set; }
         public int EmployeeID { get; set; }
 

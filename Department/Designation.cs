@@ -8,6 +8,7 @@ namespace UserManagement.Department
 {
     public class Designation : Base
     {
+        public int DesignationID { get; set; }
         public string? Name { get; set; }
         public string? ShortName { get; set; }
     }
