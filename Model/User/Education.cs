@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UserManagement.User
+namespace UserManagement.Model.User
 {
     public class Education
     {

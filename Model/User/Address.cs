@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UserManagement.User
+namespace UserManagement.Model.User
 {
-    public class Address
+    public class Address 
     {
         public string? addressType {  get; set; } 
         public string? permDoorNo {  get; set; }

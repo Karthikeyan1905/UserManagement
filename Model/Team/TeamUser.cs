@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UserManagement.Department;
 
-namespace UserManagement.Team
+namespace UserManagement.Model.Team
 {
     public class TeamUser : Base
     {

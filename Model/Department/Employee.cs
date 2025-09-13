@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UserManagement.User;
+using UserManagement.Model.User;
 
-namespace UserManagement.Department
+namespace UserManagement.Model.Department
 {
     public class Employee : Base
     {
         
-        public int deptID { get;set }
+        public int deptID { get; set; }
         public int designationID { get; set; }
         public int EmployeeID { get; set; }
         public int UserID { get; set; }

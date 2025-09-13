@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UserManagement.User;
 
-
-namespace UserManagement.User
+namespace UserManagement.Model.User
 {
     [Serializable]
     public class UserInfo: Base
     {
-        public object departments;
-        public object Experiance;
+        
 
 
         public int userRoleID { get; set; }
@@ -53,6 +50,7 @@ namespace UserManagement.User
         public List<Company> experiance { get; set; }
         public static List<UserInfo> RegisteredUsers { get; } = new();
 
-   
+        //public object departments;
+        //public object Experiance;
     }
 }

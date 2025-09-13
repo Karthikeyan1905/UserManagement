@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UserManagement.Team
+namespace UserManagement.Model.Team
 {
     public class Team : Base
     {
