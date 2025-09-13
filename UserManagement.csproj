@@ -11,4 +11,8 @@
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UserManagementModel\UserManagementModel.csproj" />
+  </ItemGroup>
+
 </Project>
