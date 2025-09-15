@@ -16,9 +16,9 @@ namespace UserManagement.Bussiness.Repository
     {
         MySqldbConnection connection;
 
-        public UserInfoRepository() 
+        public UserInfoRepository(string connectionString) 
         {
-            connection = new MySqldbConnection(Connection.GetConnectionString);
+            connection = new MySqldbConnection(connectionString);
         }
         public bool Insert(UserInfo request)
         {
