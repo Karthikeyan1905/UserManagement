@@ -15,9 +15,7 @@ namespace UserManagement.Helper
             if (input!= null && input.Rows.Count > 0 )
             
                return input.Rows[0]["code"].Equals(200);
-               return false;
-                
-            
+               return false;    
         }
         public static bool HasRecord(DataTable input) 
         {

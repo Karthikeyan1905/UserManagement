@@ -75,6 +75,7 @@ namespace UserManagement.Bussiness.Repository
             return Verification.IsSuccess(connection.ExecuteQuery("sp_address_changestatus", parameters));
 
         }
+
         public List<Address> Select(Address request)
         {
 
