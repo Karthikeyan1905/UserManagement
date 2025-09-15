@@ -9,6 +9,7 @@ using UserManagement.dataAccess;
 using UserManagement.Helper;
 using UserManagement.Model.User;
 
+
 namespace UserManagement.Bussiness.Repository
 {
     public class UserInfoRepository: IUserInfoRepository
@@ -21,10 +22,6 @@ namespace UserManagement.Bussiness.Repository
         }
         public bool Insert(UserInfo request)
         {
-            
-
-            
-
             var parameters = new Dictionary<string, object>
         {
             { "p_username", request.userName },
@@ -35,7 +32,6 @@ namespace UserManagement.Bussiness.Repository
             { "p_pancarno", request.panCardNo },
             { "p_passport", request.passportNo },
             { "p_status", request.Status },
-            
             { "p_createdby", request.createdBy }
             
         };
