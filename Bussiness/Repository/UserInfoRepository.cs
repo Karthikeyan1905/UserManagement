@@ -20,7 +20,6 @@ namespace UserManagement.Bussiness.Repository
         {
             connection = new MySqldbConnection(Connection.GetConnectionString);
         }
-
         public bool Insert(UserInfo request)
         {
             var parameters = new Dictionary<string, object>
