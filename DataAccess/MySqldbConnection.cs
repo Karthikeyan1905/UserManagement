@@ -31,20 +31,22 @@ namespace UserManagement.dataAccess
         public DataTable ExecuteQuery(string query, Dictionary<string, object> parameter)
         {
             using (var connection = new MySqlConnection(_connectionString))
-            using (var command = new MySqlCommand(query, connection))
-
             {
-                command.CommandType = CommandType.StoredProcedure;
-                if (parameter != null && parameter.Count > 0)
+                using (var command = new MySqlCommand(query, connection))
+
                 {
-                    foreach(var item in parameter)
-                    command.Parameters.AddWithValue(item.Key,item.Value);
-                }
-                using (var adapter = new MySqlDataAdapter(command))
-                {
-                    var dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-                    return dataTable;
+                    command.CommandType = CommandType.StoredProcedure;
+                    if (parameter != null && parameter.Count > 0)
+                    {
+                        foreach (var item in parameter)
+                            command.Parameters.AddWithValue(item.Key, item.Value);
+                    }
+                    using (var adapter = new MySqlDataAdapter(command))
+                    {
+                        var dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        return dataTable;
+                    }
                 }
             }
         }
