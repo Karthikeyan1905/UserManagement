@@ -16,9 +16,9 @@ namespace UserManagement.Bussiness.Repository
     {
         MySqldbConnection connection;
 
-        public UserInfoRepository() 
+        public UserInfoRepository(string connectionString) 
         {
-            connection = new MySqldbConnection(Connection.GetConnectionString);
+            connection = new MySqldbConnection(connectionString);
         }
         public bool Insert(UserInfo request)
         {
@@ -28,10 +28,10 @@ namespace UserManagement.Bussiness.Repository
             { "p_email", request.email },
             { "p_fathername", request.fatherName },
             { "p_mothername", request.motherName },
-            { "p_aadhaarnumber", request.AadhaarNumber },
+            { "p_aadhaarnumber", request.aadhaarNumber },
             { "p_pancarno", request.panCardNo },
             { "p_passport", request.passportNo },
-            { "p_status", request.Status },
+            { "p_status", request.status },
             { "p_createdby", request.createdBy }
             
         };
@@ -49,10 +49,10 @@ namespace UserManagement.Bussiness.Repository
             { "p_email", request.email },
             { "p_fathername", request.fatherName },
             { "p_mothername", request.motherName },
-            { "p_aadhaarnumber", request.AadhaarNumber },
+            { "p_aadhaarnumber", request.aadhaarNumber },
             { "p_pancarno", request.panCardNo },
             { "p_passport", request.passportNo },
-            { "p_status", request.Status },
+            { "p_status", request.status },
             { "p_updatedby", request.updatedBy }
 
         };
@@ -66,7 +66,7 @@ namespace UserManagement.Bussiness.Repository
             var parameters = new Dictionary<string, object>
         {
             { "p_userid", request.userID },
-            { "p_status", request.Status },
+            { "p_status", request.status },
             { "p_updatedby", request.updatedBy }
 
         };
@@ -79,8 +79,8 @@ namespace UserManagement.Bussiness.Repository
 
             var parameters = new Dictionary<string, object>
         {
-            { "p_userid", request.userID },
-            { "p_status", request.Status }
+            { "p_userid", (request.userID!= null && request.userID>0)? request.userID:DBNull.Value },
+            { "p_status", !string.IsNullOrEmpty(request.status)? request.status:DBNull.Value}
 
         };
 

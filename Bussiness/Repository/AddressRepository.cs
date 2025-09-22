@@ -11,20 +11,21 @@ using UserManagement.Model.User;
 
 namespace UserManagement.Bussiness.Repository
 {
-    public class AddressRepository
+    public class AddressRepository : IAddressRepository
     {
         MySqldbConnection connection;
 
-        public AddressRepository()
+        public AddressRepository(string connectionString)
         {
-            connection = new MySqldbConnection(Connection.GetConnectionString);
+            connection = new MySqldbConnection(connectionString);
         }
         public bool Insert(Address request)
         {
 
             var parameters = new Dictionary<string, object>
         {
-            { "p_userid", request.userid },
+            { "p_userid", request.userid},
+            { "p_addresstype", request.addressType},
             { "p_permdoorno", request.permDoorNo},
             { "p_street", request.street },
             { "p_town", request.town },
@@ -32,7 +33,7 @@ namespace UserManagement.Bussiness.Repository
             { "p_state", request.state },
             { "p_country", request.country },
             { "p_pincode", request.pincode },
-            { "p_status", request.Status  },
+            { "p_status", request.status  },
             { "p_createdby", request.createdBy }
 
         };
@@ -45,7 +46,10 @@ namespace UserManagement.Bussiness.Repository
 
             var parameters = new Dictionary<string, object>
         {
-          { "p_userid", request.userid },
+                { "p_userid", request.userid },
+            { "p_addressid", request.addressid },
+            {"p_addresstype", request.addressType },
+            
             { "p_permdoorno", request.permDoorNo},
             { "p_street", request.street },
             { "p_town", request.town },
@@ -53,8 +57,8 @@ namespace UserManagement.Bussiness.Repository
             { "p_state", request.state },
             { "p_country", request.country },
             { "p_pincode", request.pincode },
-            { "p_status", request.Status  },
-            { "p_createdby", request.createdBy }
+            { "p_status", request.status  },
+            { "p_updatedby", request.updatedBy }
 
         };
 
@@ -66,8 +70,8 @@ namespace UserManagement.Bussiness.Repository
 
             var parameters = new Dictionary<string, object>
         {
-            { "p_userid", request.userid },
-            { "p_status", request.Status },
+            { "p_addressid", request.addressid},
+            { "p_status", request.status },
             { "p_updatedby", request.updatedBy }
 
         };
@@ -81,8 +85,10 @@ namespace UserManagement.Bussiness.Repository
 
             var parameters = new Dictionary<string, object>
         {
-            { "p_userid", request.userid },
-            { "p_status", request.Status }
+
+            { "p_userid", (request.userid !=null && request.userid>0)? request.userid:DBNull.Value},
+            { "p_addressid", (request.addressid!=null && request.addressid> 0)? request.addressid:DBNull.Value   },
+            { "p_status", !string.IsNullOrEmpty(request.status)? request.status:DBNull.Value  }
 
         };
 
