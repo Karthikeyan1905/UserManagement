@@ -4,6 +4,7 @@ using System.Data;
 using UserManagement.Bussiness.RepositoryInterface;
 using UserManagement.dataAccess;
 using UserManagement.Helper;
+using UserManagement.Model.Department;
 using UserManagement.Model.User;
 
 namespace UserManagement.Bussiness.Repository
@@ -69,8 +70,16 @@ namespace UserManagement.Bussiness.Repository
 
             DataTable result = connection.ExecuteQuery("sp_loginCredential_select", parameters);
             if (Verification.HasRecord(result))
-                return Convertor.ConvertTableToList<LoginCredential>(result);
+            {
+                var loginuser = Convertor.ConvertTableToList<LoginCredential>(result);
 
+                foreach (var user in loginuser)
+                {
+                   
+                    user.user = new UserInfoRepository(connection.ConnectionString).Select(new UserInfo(){ userID = user.userID}).FirstOrDefault();
+                }
+                return loginuser;
+            }
             return new List<LoginCredential>();
         }
     }

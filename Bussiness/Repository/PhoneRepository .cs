@@ -22,7 +22,7 @@ namespace UserManagement.Bussiness.Repository
             var parameters = new Dictionary<string, object>
             {
                 { "p_userid", request.userID },
-                { "p_phoneno", request.phoneNumber },
+                { "p_phoneno", request.phoneno },
                 { "p_phonetype", request.phoneType },
                 { "p_status", request.status },
                 { "p_createdby", request.createdBy }
@@ -37,7 +37,7 @@ namespace UserManagement.Bussiness.Repository
             {
                 { "p_phoneid", request.phoneID },
                 { "p_userid", request.userID },
-                { "p_phoneno", request.phoneNumber },
+                { "p_phoneno", request.phoneno },
                 { "p_phonetype", request.phoneType },
                 { "p_status", request.status },
                 { "p_updatedby", request.updatedBy }

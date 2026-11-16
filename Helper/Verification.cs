@@ -13,8 +13,11 @@ namespace UserManagement.Helper
         {
 
             if (input!= null && input.Rows.Count > 0 )
-            
-               return input.Rows[0]["code"].Equals(200);
+            {
+                var code = input.Rows[0]["code"]?.ToString();
+                return code == "200";
+            }
+            //return input.Rows[0]["code"].Equals(200);
                return false;    
         }
         public static bool HasRecord(DataTable input) 

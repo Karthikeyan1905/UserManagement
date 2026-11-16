@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36121.58 d17.14
+VisualStudioVersion = 17.14.36121.58
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagement", "UserManagement.csproj", "{571D17E7-19AD-4F2E-9940-CC39658F839C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagementAPI", "..\UserManagementAPI\UserManagementAPI.csproj", "{2C3E2137-DE15-D82D-B1A4-311EE942AA9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagementModel", "..\UserManagementModel\UserManagementModel.csproj", "{9AB8AEF5-2B46-46A9-D587-26EC8531E5DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{571D17E7-19AD-4F2E-9940-CC39658F839C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{571D17E7-19AD-4F2E-9940-CC39658F839C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{571D17E7-19AD-4F2E-9940-CC39658F839C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C3E2137-DE15-D82D-B1A4-311EE942AA9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C3E2137-DE15-D82D-B1A4-311EE942AA9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C3E2137-DE15-D82D-B1A4-311EE942AA9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C3E2137-DE15-D82D-B1A4-311EE942AA9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AB8AEF5-2B46-46A9-D587-26EC8531E5DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AB8AEF5-2B46-46A9-D587-26EC8531E5DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AB8AEF5-2B46-46A9-D587-26EC8531E5DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AB8AEF5-2B46-46A9-D587-26EC8531E5DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
